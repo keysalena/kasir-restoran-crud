@@ -1,5 +1,5 @@
 <?php
-include "../conf/conn.php";
+include "../../conf/conn.php";
 
 if ($_POST) {
     $usn     = $_POST['username'];
@@ -14,6 +14,6 @@ if ($_POST) {
         die(mysqli_error);
     } else {
         echo '<script>alert("Data Berhasil Diubah !!!");
-window.location.href="../pages/index.php?page=user"</script>';
+window.location.href="../../pages/index.php?page=user"</script>';
     }
 }

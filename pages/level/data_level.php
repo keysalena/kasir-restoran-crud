@@ -15,7 +15,7 @@
               </div>
               <div class="modal-body">
                 <!-- Isi modal dengan inputan tambah data -->
-                <form method="POST" action="../proses/tambah_level.php">
+                <form method="POST" action="level/tambah_level.php">
                   <div class="mb-3">
                     <label for="nama_masakan" class="form-label">Nama Level</label>
                     <input type="text" class="form-control" id="nama_level" name="nama_level">
@@ -26,17 +26,10 @@
             </div>
           </div>
         </div>
-        <div class="card-body px-0 pt-0 pb-2">
+        <div class="card-body px-6 pt-0 pb-2">
           <div class="table-responsive p-0">
-            <table class="table align-items-center mb-0" id="level">
+            <table class="table align-items-center mb-0 custom-table" id="level">
               <thead>
-                <tr>
-                  <th></th>
-                  <th></th>
-                  <th class="text-center">
-                    <input type="text" class="form-control form-control-sm" id="searchInput" placeholder="Search">
-                  </th>
-                </tr>
                 <tr>
                   <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">NO</th>
                   <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">NAMA LEVEL</th>
@@ -59,7 +52,7 @@
                       <h6 class="align-middle text-center text-sm"><?php echo $row['nama_level']; ?></h6>
                     </td>
                     <td class="align-middle">
-                      <a class="btn btn-link text-danger text-gradient px-3 mb-0" href="../proses/hapus_level.php?id=<?php echo $row['id_level']; ?>"><i class="far fa-trash-alt me-2"></i>Delete</a>
+                      <a class="btn btn-link text-danger text-gradient px-3 mb-0" href="level/hapus_level.php?id=<?php echo $row['id_level']; ?>"><i class="far fa-trash-alt me-2"></i>Delete</a>
                       <a class="btn btn-link text-dark px-3 mb-0" href="#" data-bs-toggle="modal" data-bs-target="#editModal<?php echo $row['id_level']; ?>"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i>Edit</a>
                     </td>
                     <div class="modal fade" id="editModal<?php echo $row['id_level']; ?>" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
@@ -71,7 +64,7 @@
                           </div>
                           <div class="modal-body">
                             <!-- Isi modal dengan inputan edit -->
-                            <form method="POST" action="../proses/ubah_level.php">
+                            <form method="POST" action="level/ubah_level.php">
                               <input type="hidden" name="id_level" value="<?php echo $row['id_level']; ?>">
                               <div class="mb-3">
                                 <label for="nama_level" class="form-label">Nama level</label>
@@ -86,28 +79,21 @@
                     </div>
                   </tr>
                 <?php } ?>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- <script>
-  $(document).ready(function() {
-    $('#level').DataTable();
-  });
-</script> -->
-<script>
-  $(document).ready(function() {
-    $('#level').DataTable();
-  });
-
-
-  // Apply the search functionality to the table
-  $('#searchInput').on('keyup', function() {
-    table.search(this.value).draw();
-  });
-</script>
+                <script>
+                  $(document).ready(function() {
+                    $('#level').DataTable({
+                      "pagingType": "full_numbers", // Add pagination
+                      "lengthMenu": [10, 25, 50, 75, 100], // Items per page options
+                      "processing": true, // Show processing indicator
+                      "searching": true, // Enable search
+                      "ordering": true, // Enable ordering
+                      "info": true, // Show table information
+                      "autoWidth": true, // Disable auto-width
+                      "responsive": true, // Enable responsive design
+                      "language": {
+                        "search": "_INPUT_", // Search input customization
+                        "searchPlaceholder": "Search level", // Search input placeholder
+                      }
+                    });
+                  });
+                </script>

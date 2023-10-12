@@ -5,16 +5,42 @@ if (isset($_GET['page'])) {
       // Beranda
 
     case 'masakan':
-      include '../pages/data_masakan.php';
+      include '../pages/masakan/data_masakan.php';
       break;
     case 'level':
-      include '../pages/data_level.php';
+      include '../pages/level/data_level.php';
       break;
     case 'user':
-      include '../pages/data_user.php';
+      include '../pages/user/data_user.php';
+      break;
+    case 'order':
+      include '../pages/order/data_order.php';
       break;
     case 'beranda':
       include '../pages/beranda.php';
+      break;
+
+       //data pesan
+    case 'data_pesan':
+      include '../pages/pesan/data.php';
+      break;
+    case 'tambah_pesan':
+      include '../pages/pesan/tambah.php';
+      break;
+    case 'pesan';
+      include '../pages/pesan/pesan.php';
+      break;
+
+      //data detail
+    case 'data_detail':
+      include '../pages/detail/data.php';
+      break;
+    case 'tambah_detail':
+      include '../pages/detail/tambah.php';
+      break;
+
+    case 'detail_order';
+      include '../pages/detail/detail.php';
       break;
   }
 } else {

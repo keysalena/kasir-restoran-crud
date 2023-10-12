@@ -1,5 +1,5 @@
 <?php
-include "../conf/conn.php";
+include "../../conf/conn.php";
 
 if ($_POST) {
     $id     = $_POST['id_masakan'];
@@ -13,6 +13,6 @@ if ($_POST) {
         die(mysqli_error($koneksi));
     } else {
         echo '<script>alert("Data Berhasil Diubah !!!");
-        window.location.href="../pages/index.php?page=masakan"</script>';
+        window.location.href="../../pages/index.php?page=masakan"</script>';
     }
 }

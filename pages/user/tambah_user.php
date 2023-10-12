@@ -1,5 +1,5 @@
 <?php
-include "../conf/conn.php";
+include "../../conf/conn.php";
 
 if ($_POST) {
     $usn   = $_POST['username'];
@@ -13,6 +13,6 @@ if ($_POST) {
         die("Error: " . mysqli_error($koneksi)); // Print the error message
     } else {
         echo '<script>alert("Data Berhasil Ditambahkan !!!");
-    window.location.href="../pages/index.php?page=user"</script>';
+    window.location.href="../../pages/index.php?page=user"</script>';
     }
 }
