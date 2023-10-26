@@ -105,7 +105,7 @@
                       <option value="1">Administrator</option>
                       <option value="2">Waiter</option>
                       <option value="3">Kasir</option>
-                      <option value="4">Owner</option>
+                      <!-- <option value="4">Owner</option> -->
                       <option value="5">Pelanggan</option>
                     </select>
                   </div>

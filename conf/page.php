@@ -20,7 +20,7 @@ if (isset($_GET['page'])) {
       include '../pages/beranda.php';
       break;
 
-       //data pesan
+      //data pesan
     case 'data_pesan':
       include '../pages/pesan/data.php';
       break;
@@ -31,6 +31,12 @@ if (isset($_GET['page'])) {
       include '../pages/pesan/pesan.php';
       break;
 
+      //data transaksi
+    case 'data_transaksi':
+      include '../pages/transaksi/data.php';
+      break;
+
+
       //data detail
     case 'data_detail':
       include '../pages/detail/data.php';
@@ -38,7 +44,6 @@ if (isset($_GET['page'])) {
     case 'tambah_detail':
       include '../pages/detail/tambah.php';
       break;
-
     case 'detail_order';
       include '../pages/detail/detail.php';
       break;

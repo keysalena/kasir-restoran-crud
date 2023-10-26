@@ -61,7 +61,7 @@ if (!empty($_SESSION['kantong_belanja'])) {
                       </tr>
                       <tr>
                         <td>No Meja</td>
-                        <td><input class="form-control pencarian" type="text" name="no_meja" id="no_meja" placeholder="Pilih No Meja" required readonly></td>
+                        <td><input class="form-control pencarian" type="text" name="no_meja" id="no_meja" placeholder="Pilih No Meja"readonly></td>
                       </tr>
                       <input class="form-control pencarian" type="hidden" name="id_order" id="id_order" readonly>
                       <tr>

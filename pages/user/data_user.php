@@ -88,7 +88,7 @@
                       <h6 class="align-middle text-center text-sm"><?php echo $row['nama_level']; ?></h6>
                     </td>
                     <td class="align-middle">
-                      <a class="btn btn-link text-danger text-gradient px-3 mb-0" href="../proses/hapus_user.php?id=<?php echo $row['id_user']; ?>"><i class="far fa-trash-alt me-2"></i>Delete</a>
+                      <a class="btn btn-link text-danger text-gradient px-3 mb-0" href="user/hapus_user.php?id=<?php echo $row['id_user']; ?>"><i class="far fa-trash-alt me-2"></i>Delete</a>
                       <a class="btn btn-link text-dark px-3 mb-0" href="#" data-bs-toggle="modal" data-bs-target="#editModal<?php echo $row['id_user']; ?>"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i>Edit</a>
                     </td>
                     <div class="modal fade" id="editModal<?php echo $row['id_user']; ?>" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
