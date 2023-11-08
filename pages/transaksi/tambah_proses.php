@@ -6,6 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get input values from the form
     $id_user = $_POST['id_user'];
     $id_order = $_POST['id_order'];
+    $name = $_POST['name'];
     date_default_timezone_set('Asia/Jakarta');
     $tgl = date("Y-m-d H:i:s");
 
@@ -29,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nom = $no1['nomeja'];
 
     // Insert data ke tabel transaksi dengan nilai id_detail_order yang sudah di-gabungkan
-    $insertQuery = mysqli_query($koneksi, "INSERT INTO transaksi (nama, nomeja, tanggal, total_bayar) VALUES ('$namau', '$nom', '$tgl', '$totalHarga')");
+    $insertQuery = mysqli_query($koneksi, "INSERT INTO transaksi (nama, name, nomeja, tanggal, total_bayar) VALUES ('$namau', '$name', '$nom', '$tgl', '$totalHarga')");
     if ($insertQuery) {
         echo "<script>alert('Pesanan berhasil ditambahkan.'); window.location.href = '../../pages/index.php?page=data_transaksi';</script>";
     } else {

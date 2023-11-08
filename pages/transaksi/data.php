@@ -5,6 +5,7 @@
       body * {
         visibility: hidden;
       }
+
       table {
         visibility: visible;
       }
@@ -109,19 +110,19 @@
           "search": "_INPUT_",
           "searchPlaceholder": "Search level",
         }
-  });
-});
+      });
+    });
   </script>
   <script>
+    function printTable() {
+      var printContents = document.querySelector("#level").outerHTML;
+      var originalContents = document.body.innerHTML;
+      document.body.innerHTML = printContents;
+      window.print();
+      document.body.innerHTML = originalContents;
+    }
+  </script>
 
-  function printTable() {
-    var printContents = document.querySelector("#level").outerHTML;
-    var originalContents = document.body.innerHTML;
-    document.body.innerHTML = printContents;
-    window.print();
-    document.body.innerHTML = originalContents;
-  }
-</script>
   </html>
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
